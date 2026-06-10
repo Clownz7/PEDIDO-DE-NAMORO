@@ -169,11 +169,12 @@ h1 {
 
 <body>
 
+<!-- MÚSICA -->
 <iframe
 id="musica"
 width="0"
 height="0"
-src="https://www.youtube.com/embed/dWpGsK8Md28?autoplay=1&loop=1&playlist=dWpGsK8Md28&enablejsapi=1"
+src=""
 allow="autoplay">
 </iframe>
 
@@ -205,9 +206,12 @@ allow="autoplay">
 </div>
 </div>
 
-<!-- BOTÃO -->
 <button class="btn-declaracao" onclick="abrirDeclaracao()">
-💌 Abra Sua Declaração
+    💌 Abra Sua Declaração
+</button>
+
+<button class="btn-musica" onclick="document.getElementById('musica').play()">
+    🎵 Nossa Música
 </button>
 
 <!-- POPUP -->
@@ -698,6 +702,36 @@ setTimeout(()=>c.remove(),5000);
 }
 
 </style>
+
+<style>
+    .btn-musica {
+        background: linear-gradient(45deg, #ff66b3, #ff99cc);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 10px auto;
+        display: block;
+        box-shadow: 0 0 15px rgba(255, 105, 180, .5);
+        transition: 0.3s;
+    }
+    
+    .btn-musica:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<script>
+    function tocarMusica() {
+        let iframe = document.getElementById("musica");
+        
+        iframe.src =
+            "https://www.youtube.com/embed/dWpGsK8Md28?autoplay=1&loop=1&playlist=dWpGsK8Md28";
+    }
+</script>
 
 </body>
 </html>
