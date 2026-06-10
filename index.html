@@ -169,11 +169,11 @@ h1 {
 
 <body>
 
-<iframe
-id="musica"
+<!-- 🎵 MÚSICA -->
+<iframe id="musica"
 width="0"
 height="0"
-src=""
+src="https://www.youtube.com/embed/dWpGsK8Md28?autoplay=1&loop=1&playlist=dWpGsK8Md28"
 allow="autoplay">
 </iframe>
 
@@ -208,10 +208,6 @@ allow="autoplay">
 <!-- BOTÃO -->
 <button class="btn-declaracao" onclick="abrirDeclaracao()">
 💌 Abra Sua Declaração
-</button>
-
-<button class="btn-musica" onclick="tocarMusica()">
-    🎵 Nossa Música
 </button>
 
 <!-- POPUP -->
@@ -421,16 +417,11 @@ window.onclick = function(event){
 
 <script>
 function entrar(){
-    document.getElementById('entrada').style.display = 'none';
-    document.getElementById('site').style.display = 'block';
+document.getElementById('entrada').style.display='none';
+document.getElementById('site').style.display='block';
 
-    const player = document.getElementById("musica");
-    player.src = "";
-}
-
-function tocarMusica(){
-    document.getElementById("musica").src =
-    "https://www.youtube.com/embed/dWpGsK8Md28?autoplay=1&loop=1&playlist=dWpGsK8Md28";
+const player = document.getElementById("musica");
+player.src = "https://www.youtube.com/embed/dWpGsK8Md28?autoplay=1&loop=1&playlist=dWpGsK8Md28";
 }
 
 function irFinal(){
@@ -706,27 +697,6 @@ setTimeout(()=>c.remove(),5000);
     background:#555;
 }
 
-</style>
-
-<style>
-    .btn-musica {
-        background: linear-gradient(45deg, #ff66b3, #ff99cc);
-        color: white;
-        border: none;
-        padding: 15px 30px;
-        border-radius: 30px;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        margin: 10px auto;
-        display: block;
-        box-shadow: 0 0 15px rgba(255, 105, 180, .5);
-        transition: 0.3s;
-    }
-    
-    .btn-musica:hover {
-        transform: scale(1.05);
-    }
 </style>
 
 </body>
