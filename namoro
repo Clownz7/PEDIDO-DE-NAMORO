@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosso Amor 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(270deg, #000, #1a0005, #000);
+    background-size: 600% 600%;
+    animation: fundoAnimado 10s ease infinite;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fundoAnimado {
+    0% {background-position:0% 50%}
+    50% {background-position:100% 50%}
+    100% {background-position:0% 50%}
+}
+
+/* ENTRADA */
+#entrada {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: url('https://i.postimg.cc/y6GChjyK/Whats-App-Image-2026-06-08-at-09-30-08.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+#entrada::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+#entrada h2, #entrada button {
+    position: relative;
+    z-index: 1;
+}
+
+#entrada button {
+    padding: 20px 40px;
+    font-size: 20px;
+    border-radius: 12px;
+    background: #ff2e4d;
+    color: white;
+    border: none;
+}
+
+/* SITE */
+.container {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: cursive;
+    font-size: 32px;
+    text-shadow: 0 0 10px #ff4d6d;
+}
+
+/* SLIDER */
+.slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    min-width: 250px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* TEXTO */
+.texto {
+    margin-top: 20px;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* TEMPO */
+.tempo-box {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.box {
+    background: #111;
+    border: 2px solid #ff2e4d;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.box span {
+    font-size: 22px;
+}
+
+/* CONTADOR */
+.contador-romantico {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background: radial-gradient(circle, #2a0005, #000);
+    box-shadow: 0 0 20px #ff2e4d;
+}
+
+.contador-romantico h1 {
+    font-size: 45px;
+}
+
+/* BOTÃO */
+.botao-final {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 20px;
+    background: #ff2e4d;
+    border: none;
+    color: white;
+}
+
+/* FINAL */
+#final {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 20;
+}
+
+/* CORAÇÕES */
+.coracao {
+    position: fixed;
+    top: -10px;
+    animation: cair linear infinite;
+}
+
+@keyframes cair {
+    to { transform: translateY(110vh); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 MÚSICA -->
+<iframe id="musica"
+width="0"
+height="0"
+src="https://www.youtube.com/embed/dWpGsK8Md28?autoplay=1&loop=1&playlist=dWpGsK8Md28"
+allow="autoplay">
+</iframe>
+
+<!-- ENTRADA -->
+<div id="entrada">
+<h2>Tenho uma surpresa 💌</h2>
+<button onclick="entrar()">Entrar ❤️</button>
+</div>
+
+<!-- SITE -->
+<div class="container" id="site">
+
+<h1>Adrian Cris & Nathalia Marasca 💖</h1>
+
+<p>Desde 12/06/2026 às 00:00</p>
+
+<!-- SLIDER -->
+<div class="slider">
+<div class="card">
+<img src="https://i.postimg.cc/WbVtWVRw/Whats-App-Image-2026-06-06-at-17-01-44.jpg">
+</div>
+
+<div class="card">
+<img src="https://i.postimg.cc/pdmdhX8v/Whats-App-Image-2026-06-06-at-17-01-442.jpg">
+</div>
+
+<div class="card">
+<img src="https://i.postimg.cc/mkp4Xprf/Chat-GPT-Image-7-de-jun-de-2026-11-17-27.png">
+</div>
+</div>
+
+<!-- BOTÃO -->
+<button class="btn-declaracao" onclick="abrirDeclaracao()">
+💌 Abra Sua Declaração
+</button>
+
+<!-- POPUP -->
+<div id="popupDeclaracao" class="popup">
+  <div class="popup-conteudo">
+
+    <span class="fechar" onclick="fecharDeclaracao()">✖</span>
+
+    <h2>💖 Para o Amor da Minha Vida 💖</h2>
+
+    <div class="texto-popup">
+
+      Tudo começou de uma forma simples, quase como um acaso do destino... 💻✨<br><br>
+
+      Entre milhares de pessoas no mundo, nossos caminhos se cruzaram pela internet. No começo eram apenas mensagens, conversas que faziam o tempo passar mais rápido, risadas que surgiam sem esforço e uma vontade inexplicável de continuar falando com você todos os dias.<br><br>
+
+      Quem diria que algo tão simples mudaria completamente a minha vida?<br><br>
+
+      Sem que eu percebesse, você começou a ocupar meus pensamentos. Eu acordava querendo saber como você estava, passava o dia esperando uma mensagem sua e dormia pensando em tudo que havíamos conversado. Aos poucos, você deixou de ser apenas alguém especial e se tornou uma das pessoas mais importantes da minha vida. ❤️<br><br>
+
+      Você chegou de repente, sem avisar, sem fazer promessas, sem imaginar o quanto seria importante para mim. E foi justamente isso que tornou tudo tão especial. Quando percebi, já não conseguia imaginar meus dias sem você, sem sua presença, sem seu carinho e sem a felicidade que você traz para a minha vida. 💘<br><br>
+
+      Cada mensagem sua tem o poder de iluminar os meus dias mais difíceis. Cada risada sua é capaz de transformar qualquer momento comum em algo inesquecível. Cada conversa nossa se torna uma lembrança que guardo com carinho no coração. ✨<br><br>
+
+      Mesmo quando estamos longe, você consegue me fazer sentir perto. Mesmo quando existem quilômetros entre nós, o meu coração encontra o seu de alguma forma. Porque o amor verdadeiro não se mede pela distância, mas pela intensidade do sentimento que une duas pessoas. ❤️<br><br>
+
+      E o que eu sinto por você é verdadeiro.<br><br>
+
+      É aquele sentimento que cresce a cada dia.<br>
+      É aquele sentimento que traz paz.<br>
+      É aquele sentimento que faz sonhar com o futuro.<br>
+      É aquele sentimento que me faz acreditar que encontrei alguém único. 💖<br><br>
+
+      Você é muito mais do que eu poderia desejar. Você é meu sorriso nos dias difíceis, minha tranquilidade nos momentos de preocupação, minha felicidade nas pequenas coisas e minha força quando tudo parece complicado. 💖<br><br>
+
+      Sou grato por cada conversa, por cada momento compartilhado, por cada demonstração de carinho e por cada instante que vivemos juntos. Você transformou minha vida de uma maneira que ninguém jamais conseguiu transformar. Desde que você chegou, tudo ficou mais bonito, mais leve e mais especial. ✨<br><br>
+
+      Você me ensinou que o amor pode nascer das formas mais inesperadas. Me mostrou que duas pessoas podem criar uma conexão incrível mesmo quando tudo começou através de uma tela. E hoje eu tenho a certeza de que encontrar você foi uma das melhores coisas que já aconteceram na minha vida. 💍<br><br>
+
+      Por isso, eu quero continuar escrevendo essa história ao seu lado. Quero viver novos momentos, criar novas memórias, superar desafios juntos e celebrar cada conquista de mãos dadas com você. Quero que nossos sonhos se encontrem, que nossos caminhos continuem unidos e que o nosso amor fique cada vez mais forte. ❤️<br><br>
+
+      Porque não importa o que aconteça, não importa a distância, não importa o tempo...<br><br>
+
+      Meu coração escolheu você. ❤️<br><br>
+
+      E faria essa escolha mil vezes, em mil vidas diferentes, porque você é a pessoa que faz meus olhos brilharem, meu coração acelerar e minha alma encontrar paz. ✨<br><br>
+
+      Eu te amo mais do que palavras conseguem explicar.<br>
+      Mais do que qualquer texto consegue descrever.<br>
+      Mais do que qualquer distância pode separar. ❤️<br><br>
+
+      E tudo o que eu quero é continuar ao seu lado, cuidando de você, fazendo você sorrir e construindo uma linda história juntos.<br><br>
+
+      💖 Eu te amo hoje.<br>
+      💖 Eu te amarei amanhã.<br>
+      💖 E vou continuar te amando por todos os dias da minha vida.<br><br>
+
+      💍 Para sempre nós. ❤️✨
+
+    </div>
+
+  </div>
+</div>
+
+<style>
+.btn-declaracao{
+    background: linear-gradient(45deg,#ff4d88,#ff66b3);
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    margin:20px auto;
+    display:block;
+    box-shadow:0 0 20px rgba(255,105,180,.5);
+    transition:.3s;
+}
+
+.btn-declaracao:hover{
+    transform:scale(1.08);
+}
+
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.85);
+    z-index:9999;
+}
+
+.popup-conteudo{
+    background:white;
+    width:90%;
+    max-width:850px;
+    margin:30px auto;
+    padding:30px;
+    border-radius:20px;
+    position:relative;
+    animation:aparecer .5s ease;
+}
+
+.popup-conteudo h2{
+    text-align:center;
+    color:#ff4d88;
+    margin-bottom:20px;
+}
+
+.texto-popup{
+    line-height:1.8;
+    color:#333;
+    max-height:70vh;
+    overflow-y:auto;
+    padding-right:10px;
+}
+
+.fechar{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:28px;
+    cursor:pointer;
+    color:#ff4d88;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+
+<script>
+function abrirDeclaracao(){
+    document.getElementById("popupDeclaracao").style.display = "block";
+}
+
+function fecharDeclaracao(){
+    document.getElementById("popupDeclaracao").style.display = "none";
+}
+
+window.onclick = function(event){
+    const popup = document.getElementById("popupDeclaracao");
+    if(event.target == popup){
+        popup.style.display = "none";
+    }
+}
+</script>
+
+<!-- TEMPO -->
+<h2>Tempo Juntos 💘</h2>
+
+<div class="tempo-box">
+<div class="box"><span id="anos">0</span><p>ANOS</p></div>
+<div class="box"><span id="meses">0</span><p>MESES</p></div>
+<div class="box"><span id="dias">0</span><p>DIAS</p></div>
+<div class="box"><span id="horas">0</span><p>HORAS</p></div>
+<div class="box"><span id="minutos">0</span><p>MIN</p></div>
+<div class="box"><span id="segundos">0</span><p>SEG</p></div>
+</div>
+
+<!-- CONTADOR -->
+<div class="contador-romantico">
+<h2>Sendo Feliz</h2>
+<h1 id="diasJuntos">0 dias</h1>
+<p>ao seu lado ❤️</p>
+</div>
+
+<button class="botao-final" onclick="irFinal()">Clique aqui ❤️</button>
+
+</div>
+
+<!-- POPUP ROMÂNTICO -->
+<div id="final">
+  
+  <div class="caixa-amor">
+    
+    <div class="coracao">💖</div>
+    
+    <h2>Quer namorar comigo? 💍❤️</h2>
+    
+    <p>
+      Nathalia Marasca,<br>
+      você é a pessoa mais especial da minha vida ✨❤️
+    </p>
+    
+    <button class="btn-sim" onclick="sim()">
+      SIM 💖
+    </button>
+    
+    <button class="btn-nao" id="nao">
+      NÃO 😢
+    </button>
+    
+  </div>
+  
+</div>
+
+<script>
+function entrar(){
+document.getElementById('entrada').style.display='none';
+document.getElementById('site').style.display='block';
+
+const player = document.getElementById("musica");
+player.src = "https://www.youtube.com/embed/dWpGsK8Md28?autoplay=1&loop=1&playlist=dWpGsK8Md28";
+}
+
+function irFinal(){
+document.getElementById('site').style.display='none';
+document.getElementById('final').style.display='flex';
+}
+
+function sim(){
+alert("Agora você é oficialmente minha 💖");
+}
+
+const nao=document.getElementById("nao");
+nao.onmouseover=()=>{
+nao.style.position="absolute";
+nao.style.left=Math.random()*80+"vw";
+nao.style.top=Math.random()*80+"vh";
+};
+
+const inicio = new Date("2026-06-12T00:00:00");
+
+// DIAS
+setInterval(() => {
+
+    const agora = new Date();
+
+    if (agora < inicio) {
+        document.getElementById("diasJuntos").innerText = "0 dias";
+        return;
+    }
+
+    const diff = agora - inicio;
+    const dias = Math.floor(diff / 86400000);
+
+    document.getElementById("diasJuntos").innerText =
+        dias + " dias";
+
+}, 1000);
+
+// TEMPO COMPLETO
+setInterval(() => {
+
+    const agora = new Date();
+
+    if (agora < inicio) {
+
+        document.getElementById("anos").innerText = "0";
+        document.getElementById("meses").innerText = "0";
+        document.getElementById("dias").innerText = "0";
+        document.getElementById("horas").innerText = "0";
+        document.getElementById("minutos").innerText = "0";
+        document.getElementById("segundos").innerText = "0";
+
+        return;
+    }
+
+    let anos = agora.getFullYear() - inicio.getFullYear();
+    let meses = agora.getMonth() - inicio.getMonth();
+    let dias = agora.getDate() - inicio.getDate();
+
+    let horas = agora.getHours() - inicio.getHours();
+    let minutos = agora.getMinutes() - inicio.getMinutes();
+    let segundos = agora.getSeconds() - inicio.getSeconds();
+
+    if (segundos < 0) { segundos += 60; minutos--; }
+    if (minutos < 0) { minutos += 60; horas--; }
+    if (horas < 0) { horas += 24; dias--; }
+    if (dias < 0) { meses--; dias += 30; }
+    if (meses < 0) { meses += 12; anos--; }
+
+    document.getElementById("anos").innerText = anos;
+    document.getElementById("meses").innerText = meses;
+    document.getElementById("dias").innerText = dias;
+    document.getElementById("horas").innerText = horas;
+    document.getElementById("minutos").innerText = minutos;
+    document.getElementById("segundos").innerText = segundos;
+
+}, 1000);
+
+// CORAÇÕES
+setInterval(()=>{
+const c=document.createElement('div');
+c.className='coracao';
+c.innerHTML='❤️';
+c.style.left=Math.random()*100+'vw';
+c.style.animationDuration=(Math.random()*3+2)+'s';
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),5000);
+},300);
+</script>
+
+<style>
+
+/* POPUP ROMÂNTICO */
+#final{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(10px);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+/* CAIXA DO PEDIDO */
+.caixa-amor{
+    width:90%;
+    max-width:420px;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        -45deg,
+        #ff004c,
+        #ff2e63,
+        #ff6b81,
+        #ff004c
+    );
+
+    background-size:400% 400%;
+
+    animation:
+    entrada 0.8s ease,
+    brilho 6s ease infinite,
+    flutuar 3s ease-in-out infinite;
+
+    box-shadow:
+    0 0 20px #ff2e63,
+    0 0 40px #ff2e63,
+    0 0 80px #ff2e63,
+    0 0 120px #ff6b81;
+
+    border:3px solid rgba(255,255,255,.4);
+}
+
+/* ENTRADA */
+@keyframes entrada{
+    0%{
+        opacity:0;
+        transform:scale(.3);
+    }
+
+    70%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* FUNDO NEON */
+@keyframes brilho{
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* FLUTUANDO */
+@keyframes flutuar{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+/* CORAÇÃO */
+.coracao{
+    position:fixed;
+    top:-10px;
+    font-size:25px;
+    pointer-events:none;
+    z-index:10000; /* maior que o popup */
+    animation:cair linear infinite;
+}
+
+@keyframes cair{
+    to{
+        transform:translateY(110vh);
+    }
+}
+
+/* TITULO */
+.caixa-amor h2{
+    color:white;
+    font-size:32px;
+
+    margin-top:10px;
+
+    text-shadow:
+    0 0 10px #fff,
+    0 0 20px #ff2e63;
+}
+
+/* TEXTO */
+.caixa-amor p{
+    color:white;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* BOTÕES */
+.btn-sim{
+    background:white;
+    color:#ff004c;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:30px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    margin:10px;
+
+    animation:pulsar 1.2s infinite;
+
+    box-shadow:
+    0 0 10px #fff,
+    0 0 20px #fff;
+}
+
+@keyframes pulsar{
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.1);
+    }
+}
+
+.btn-nao{
+    background:#333;
+    color:white;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:30px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    margin:10px;
+}
+
+.btn-nao:hover{
+    background:#555;
+}
+
+</style>
+
+</body>
+</html>
