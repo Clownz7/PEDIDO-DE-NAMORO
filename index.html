@@ -170,7 +170,7 @@ h1 {
 <body>
 
 <audio id="musica" loop>
-    <source src="Luan Santana-Te Vivo.mp3" type="audio/mpeg">
+    <source src="musica.mp3" type="audio/mpeg">
 </audio>
 
 <!-- ENTRADA -->
@@ -416,12 +416,9 @@ window.onclick = function(event){
 </div>
 
 <script>
-function entrar(){
+function entrar() {
     document.getElementById('entrada').style.display = 'none';
     document.getElementById('site').style.display = 'block';
-
-    const player = document.getElementById("musica");
-    player.src = "";
 }
 
 function tocarMusica() {
