@@ -169,9 +169,13 @@ h1 {
 
 <body>
 
-<audio id="musica" loop>
-    <source src="musica.mp3" type="audio/mpeg">
-</audio>
+<iframe
+id="musica"
+width="0"
+height="0"
+src=""
+allow="autoplay">
+</iframe>
 
 <!-- ENTRADA -->
 <div id="entrada">
@@ -416,13 +420,17 @@ window.onclick = function(event){
 </div>
 
 <script>
-function entrar() {
+function entrar(){
     document.getElementById('entrada').style.display = 'none';
     document.getElementById('site').style.display = 'block';
+
+    const player = document.getElementById("musica");
+    player.src = "";
 }
 
-function tocarMusica() {
-    document.getElementById("musica").play();
+function tocarMusica(){
+    document.getElementById("musica").src =
+    "https://www.youtube.com/embed/dWpGsK8Md28?autoplay=1&loop=1&playlist=dWpGsK8Md28";
 }
 
 function irFinal(){
