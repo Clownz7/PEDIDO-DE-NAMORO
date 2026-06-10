@@ -169,7 +169,6 @@ h1 {
 
 <body>
 
-<!-- MÚSICA -->
 <iframe
 id="musica"
 width="0"
@@ -206,11 +205,12 @@ allow="autoplay">
 </div>
 </div>
 
+<!-- BOTÃO -->
 <button class="btn-declaracao" onclick="abrirDeclaracao()">
-    💌 Abra Sua Declaração
+💌 Abra Sua Declaração
 </button>
 
-<button class="btn-musica" onclick="document.getElementById('musica').play()">
+<button class="btn-musica" onclick="tocarMusica()">
     🎵 Nossa Música
 </button>
 
@@ -419,13 +419,19 @@ window.onclick = function(event){
   
 </div>
 
+```html
 <script>
 function entrar(){
-document.getElementById('entrada').style.display='none';
-document.getElementById('site').style.display='block';
+    document.getElementById('entrada').style.display = 'none';
+    document.getElementById('site').style.display = 'block';
 
-const player = document.getElementById("musica");
-player.src = "https://www.youtube.com/embed/dWpGsK8Md28?autoplay=1&loop=1&playlist=dWpGsK8Md28";
+    const player = document.getElementById("musica");
+    player.src = "";
+}
+
+function tocarMusica(){
+    document.getElementById("musica").src =
+    "https://www.youtube.com/embed/dWpGsK8Md28?autoplay=1&loop=1&playlist=dWpGsK8Md28";
 }
 
 function irFinal(){
@@ -723,15 +729,6 @@ setTimeout(()=>c.remove(),5000);
         transform: scale(1.05);
     }
 </style>
-
-<script>
-    function tocarMusica() {
-        let iframe = document.getElementById("musica");
-        
-        iframe.src =
-            "https://www.youtube.com/embed/dWpGsK8Md28?autoplay=1&loop=1&playlist=dWpGsK8Md28";
-    }
-</script>
 
 </body>
 </html>
