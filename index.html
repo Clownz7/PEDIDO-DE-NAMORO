@@ -169,13 +169,6 @@ h1 {
 
 <body>
 
-<!-- 🎵 MÚSICA -->
-<iframe id="musica"
-width="0"
-height="0"
-src="https://www.youtube.com/embed/ue9ZzeKV344?autoplay=1&loop=1&playlist=ue9ZzeKV344"
-allow="autoplay">
-</iframe>
 
 <!-- ENTRADA -->
 <div id="entrada">
@@ -209,6 +202,62 @@ allow="autoplay">
 <button class="btn-declaracao" onclick="abrirDeclaracao()">
 💌 Abra Sua Declaração
 </button>
+
+<!-- BOTÃO -->
+<button class="btn-declaracao" onclick="abrirMusica()">
+🎵 Escute Nossa Música
+</button>
+
+<!-- POPUP -->
+<div id="popupMusica" class="popup">
+  <div class="popup-conteudo">
+
+    <span class="fechar" onclick="fecharMusica()">✖</span>
+
+    <h2>💖 Nossa Música 💖</h2>
+
+    <iframe
+width="100%"
+height="400"
+src="https://www.youtube.com/embed/36W_wRuPYbs"
+allow="autoplay"
+allowfullscreen>
+</iframe>
+
+<p style="
+margin-top:20px;
+font-size:18px;
+line-height:1.8;
+color:#444;
+text-align:center;
+font-style:italic;
+">
+
+🌹❤️
+
+"Se o amor fosse uma canção,
+você seria a melodia que embala meu coração.
+
+Se o amor fosse uma estrela,
+você seria a mais brilhante em meu céu.
+
+Entre todos os caminhos que a vida poderia me dar,
+ela escolheu o mais bonito:
+o caminho que me levou até você.
+
+Neste Dia dos Namorados,
+quero apenas agradecer por cada sorriso,
+cada conversa, cada momento e cada sonho compartilhado.
+
+Porque amar você é a mais linda poesia
+que meu coração já escreveu. 💖✨"
+
+— Com todo meu amor, para você. ❤️
+
+</p>
+
+  </div>
+</div>
 
 <!-- POPUP -->
 <div id="popupDeclaracao" class="popup">
@@ -698,6 +747,26 @@ setTimeout(()=>c.remove(),5000);
 }
 
 </style>
+
+<script>
+    function abrirMusica() {
+        const iframe = document.querySelector("#popupMusica iframe");
+        
+        iframe.src =
+            "https://www.youtube.com/embed/36W_wRuPYbs?autoplay=1&loop=1&playlist=36W_wRuPYbs";
+        
+        document.getElementById("popupMusica").style.display = "block";
+    }
+    
+    function fecharMusica() {
+        const iframe = document.querySelector("#popupMusica iframe");
+        
+        iframe.src =
+           "https://www.youtube.com/embed/36W_wRuPYbs?autoplay=1&loop=1&playlist=36W_wRuPYbs";
+        
+        document.getElementById("popupMusica").style.display = "none";
+    }
+</script>
 
 </body>
 </html>
