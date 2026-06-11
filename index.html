@@ -204,9 +204,16 @@ h1 {
 </button>
 
 <!-- BOTÃO -->
-<button class="btn-declaracao" onclick="abrirMusica()">
-🎵 Escute Nossa Música
+<button class="btn-declaracao" onclick="tocarMusica()">
+    🎵 Escute Nossa Música
 </button>
+
+<iframe id="musicaOculta"
+width="0"
+height="0"
+style="border:0;"
+allow="autoplay">
+</iframe>
 
 <!-- POPUP -->
 <div id="popupMusica" class="popup">
@@ -765,6 +772,13 @@ setTimeout(()=>c.remove(),5000);
            "https://www.youtube.com/embed/36W_wRuPYbs?autoplay=1&loop=1&playlist=36W_wRuPYbs";
         
         document.getElementById("popupMusica").style.display = "none";
+    }
+</script>
+
+<script>
+    function tocarMusica() {
+        document.getElementById("musicaOculta").src =
+            "https://www.youtube.com/embed/36W_wRuPYbs?autoplay=1&loop=1&playlist=36W_wRuPYbs";
     }
 </script>
 
