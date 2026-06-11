@@ -203,6 +203,10 @@ h1 {
 💌 Abra Sua Declaração
 </button>
 
+<button class="btn-declaracao" onclick="abrirPromessas()">
+    💍 Minhas Promessas
+</button>
+
 <!-- BOTÃO -->
 <button class="btn-declaracao" onclick="tocarMusica()">
     🎵 Escute Nossa Música
@@ -422,6 +426,16 @@ window.onclick = function(event){
 }
 </script>
 
+<script>
+    function abrirPromessas() {
+        document.getElementById("popupPromessas").style.display = "block";
+    }
+    
+    function fecharPromessas() {
+        document.getElementById("popupPromessas").style.display = "none";
+    }
+</script>
+
 <!-- TEMPO -->
 <h2>Tempo Juntos 💘</h2>
 
@@ -485,8 +499,46 @@ document.getElementById('site').style.display='none';
 document.getElementById('final').style.display='flex';
 }
 
-function sim(){
-alert("Agora você é oficialmente minha 💖");
+function sim() {
+    
+    // Mensagem
+    alert("💖 Agora você é oficialmente minha namorada! 💖");
+    
+    // Fogos de amor
+    for (let i = 0; i < 150; i++) {
+        
+        const fogo = document.createElement("div");
+        
+        fogo.innerHTML = ["❤️", "💖", "💕", "💘", "🌹", "✨"][Math.floor(Math.random() * 6)];
+        
+        fogo.style.position = "fixed";
+        fogo.style.left = "50%";
+        fogo.style.top = "50%";
+        
+        fogo.style.fontSize =
+            (Math.random() * 20 + 15) + "px";
+        
+        fogo.style.pointerEvents = "none";
+        fogo.style.zIndex = "99999";
+        
+        const x = (Math.random() - 0.5) * 1200;
+        const y = (Math.random() - 0.5) * 1200;
+        
+        fogo.style.transition = "all 2s ease-out";
+        
+        document.body.appendChild(fogo);
+        
+        setTimeout(() => {
+            fogo.style.transform =
+                `translate(${x}px, ${y}px)`;
+            
+            fogo.style.opacity = "0";
+        }, 10);
+        
+        setTimeout(() => {
+            fogo.remove();
+        }, 2000);
+    }
 }
 
 const nao=document.getElementById("nao");
@@ -781,6 +833,228 @@ setTimeout(()=>c.remove(),5000);
             "https://www.youtube.com/embed/36W_wRuPYbs?autoplay=1&loop=1&playlist=36W_wRuPYbs";
     }
 </script>
+
+<div id="popupPromessas" class="popup">
+    <div class="popup-conteudo popup-amor">
+        
+        <span class="fechar" onclick="fecharPromessas()">✖</span>
+        
+        <h2>💍 Minhas Promessas Para Você 💖</h2>
+        
+        <div class="texto-popup">
+            
+            🌹 Meu amor,
+            
+            <br><br>
+            
+            ❤️ Prometo cuidar do seu coração com todo carinho.
+            
+            <br><br>
+            
+            ❤️ Prometo segurar sua mão nos momentos felizes e difíceis.
+            
+            <br><br>
+            
+            ❤️ Prometo fazer você sorrir mesmo nos dias mais cinzentos.
+            
+            <br><br>
+            
+            ❤️ Prometo apoiar seus sonhos e caminhar ao seu lado.
+            
+            <br><br>
+            
+            ❤️ Prometo que a distância nunca será maior que o meu amor por você.
+            
+            <br><br>
+            
+            ❤️ Prometo continuar escolhendo você todos os dias.
+            
+            <br><br>
+            
+            ❤️ Prometo amar você hoje, amanhã e por todos os nossos amanhãs. 💖
+            
+            <br><br>
+            
+            🌹 Feliz Dia dos Namorados, meu amor. 🌹
+            
+        </div>
+        
+    </div>
+</div>
+
+<style>
+
+/* 💖 POPUP DIA DOS NAMORADOS */
+.popup-conteudo{
+    width:90%;
+    max-width:850px;
+    margin:30px auto;
+    padding:30px;
+
+    border-radius:25px;
+
+    background:linear-gradient(
+        135deg,
+        #8b0000,
+        #c1121f,
+        #ff2e63
+    );
+
+    color:white;
+
+    border:2px solid rgba(255,255,255,.3);
+
+    box-shadow:
+    0 0 20px #ff2e63,
+    0 0 40px #c1121f,
+    0 0 80px #8b0000;
+
+    position:relative;
+
+    animation:aparecer .5s ease;
+}
+
+.popup-conteudo::before{
+    content:"❤️ 💖 🌹 💕 ❤️";
+    display:block;
+    text-align:center;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.popup-conteudo h2{
+    color:white;
+    text-align:center;
+
+    text-shadow:
+    0 0 10px #fff,
+    0 0 20px #ffb3c1,
+    0 0 30px #ff4d88;
+}
+
+.texto-popup{
+    color:white;
+    line-height:1.8;
+    max-height:70vh;
+    overflow-y:auto;
+    padding-right:10px;
+    text-align:center;
+    font-size:18px;
+}
+
+.fechar{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+
+<style>
+
+/* 💖 POPUP ROMÂNTICO */
+.popup-conteudo{
+    width:90%;
+    max-width:850px;
+    margin:30px auto;
+    padding:30px;
+
+    border-radius:25px;
+
+    background:linear-gradient(
+        135deg,
+        #8b0000,
+        #c1121f,
+        #ff2e63
+    );
+
+    color:white;
+
+    border:2px solid rgba(255,255,255,.3);
+
+    box-shadow:
+    0 0 20px #ff2e63,
+    0 0 40px #c1121f,
+    0 0 80px #8b0000;
+
+    position:relative;
+
+    animation:aparecer .5s ease;
+}
+
+.popup-conteudo::before{
+    content:"❤️ 💖 🌹 💕 ❤️";
+    display:block;
+    text-align:center;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.popup-conteudo h2{
+    color:white;
+    text-align:center;
+
+    text-shadow:
+    0 0 10px #fff,
+    0 0 20px #ffb3c1,
+    0 0 30px #ff4d88;
+}
+
+.texto-popup{
+    color:white;
+    line-height:1.9;
+    max-height:70vh;
+    overflow-y:auto;
+    padding-right:10px;
+    font-size:18px;
+}
+
+.fechar{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+}
+
+.texto-popup::-webkit-scrollbar{
+    width:8px;
+}
+
+.texto-popup::-webkit-scrollbar-thumb{
+    background:#ff80aa;
+    border-radius:20px;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
 
 </body>
 </html>
